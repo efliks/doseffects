@@ -9,6 +9,9 @@ The effects combined here are all written in pure C. On cleaning them up, I got 
 of the remaining inline Assembly. I have a lot more effects written in Assembler in a 
 [separate repository](https://github.com/efliks/demoscene-legacy).
 
+The code is horrible, because I wrote it in my teens. I am in the process of making
+it a bit nicer, but I cannot promise miracles.
+
 ## Installation instructions
 
 To compile the graphical effects, install [Open Watcom 2.0](https://github.com/open-watcom/open-watcom-v2) 
@@ -23,7 +26,7 @@ the dummy folder.
 
 Then, simply invoke in the main folder:
 
-    wmake -f makefile.wc
+    c:\doseffec > wmake -f makefile.wc
 
 Run the vgademo.exe executable. Switching to the next graphical effect is done by 
 pressing any key.
