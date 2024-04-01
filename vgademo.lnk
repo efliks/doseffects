@@ -1,0 +1,29 @@
+
+# vgademo.exe linker directive file
+
+option stack=20480
+option verbose
+libpath %WATCOM%/lib286
+libpath %WATCOM%/lib286/dos
+lib emu87.lib
+name vgademo
+
+file bumpmain.obj
+file bumpobj.obj
+file bumptri.obj
+file clock.obj
+file envmaps.obj
+file flag3d.obj
+file fontnew.obj
+file gfx.obj
+file low.obj
+file main.obj
+file math3d.obj
+file matrix.obj
+file object3d.obj
+file pcx.obj
+file polygon.obj
+file raytrace.obj
+file scroll.obj
+file sphere.obj
+file triangle.obj

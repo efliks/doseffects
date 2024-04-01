@@ -1,0 +1,33 @@
+CCOPTS = -2 -fp2 -ml -q -zt=100
+
+GLOBOBJS = &
+ bumpmain.obj &
+ bumpobj.obj &
+ bumptri.obj &
+ clock.obj &
+ envmaps.obj &
+ flag3d.obj &
+ fontnew.obj &
+ gfx.obj &
+ low.obj &
+ main.obj &
+ math3d.obj &
+ matrix.obj &
+ object3d.obj &
+ pcx.obj &
+ polygon.obj &
+ raytrace.obj &
+ scroll.obj &
+ sphere.obj &
+ triangle.obj
+
+all: vgademo.exe
+
+vgademo.exe: $(GLOBOBJS)
+	wlink @vgademo.lnk
+
+.c.obj:
+	wcc $(CCOPTS) -fo=$[*.obj $[*.c
+
+clean: .SYMBOLIC
+	del *.obj *.err vgademo.exe
