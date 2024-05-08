@@ -16,6 +16,7 @@
 
 void init_face_normals(OBJECT3D* obj);
 void init_point_normals(OBJECT3D *obj);
+void write_point_normals(OBJECT3D* obj);
 
 void sort_faces(OBJECT3D* obj);
 void depth_sorting(OBJECT3D* obj, short int left, short int right);
@@ -219,6 +220,29 @@ void init_point_normals(OBJECT3D* obj)
         obj->point_normals[i].x = v1.x;
         obj->point_normals[i].y = v1.y;
         obj->point_normals[i].z = v1.z;
+    }
+
+    //write_point_normals(obj);
+}
+
+void write_point_normals(OBJECT3D* obj)
+{
+    FILE* fp;
+    int i;
+
+    fp = fopen("normals.inc", "w");
+
+    if (fp != NULL) {
+        fprintf(fp, "N_POINT_NORMALS equ %d\n\npoint_normals:\n", obj->n_points);
+
+        for (i = 0; i < obj->n_points; i++) {
+            fprintf(fp, " dd  ");
+            fprintf(fp, "%f,  ", obj->point_normals[i].x);
+            fprintf(fp, "%f,  ", obj->point_normals[i].y);
+            fprintf(fp, "%f\n", obj->point_normals[i].z);
+        }
+
+        fclose(fp);
     }
 }
 
