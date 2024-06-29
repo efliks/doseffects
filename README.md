@@ -12,6 +12,8 @@ of the remaining inline Assembly. I have a lot more effects written in Assembler
 The code is horrible, because I wrote it in my teens. I am in the process of making
 it a bit nicer, but I cannot promise miracles.
 
+A quick demonstration video: [https://youtu.be/82xVEE4bYbs](https://youtu.be/82xVEE4bYbs).
+
 ## Installation instructions
 
 To compile the graphical effects, install [Open Watcom 2.0](https://github.com/open-watcom/open-watcom-v2) 
